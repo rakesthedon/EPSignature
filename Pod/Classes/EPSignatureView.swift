@@ -146,7 +146,12 @@ open class EPSignatureView: UIView {
     
     open func saveSignature(_ localPath: String) {
         if isSigned {
-            NSKeyedArchiver.archiveRootObject(bezierPath, toFile: localPath)
+            do {
+                let data = try NSKeyedArchiver.archivedData(withRootObject: bezierPath, requiringSecureCoding: false)
+                FileManager.default.createFile(atPath: localPath, contents: data)
+            } catch {
+                NSLog("impossible to save signature, error: \(error.localizedDescription)")
+            }
         }
     }
 
@@ -159,10 +164,9 @@ open class EPSignatureView: UIView {
     }
     
     fileprivate func getPath(_ filePath: String) -> UIBezierPath? {
-        if FileManager.default.fileExists(atPath: filePath) {
-            return NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? UIBezierPath
-        }
-        return nil
+        guard let data = FileManager.default.contents(atPath: filePath) else { return nil }
+
+        return try? NSKeyedUnarchiver.unarchivedObject(ofClass: UIBezierPath.self, from: data)
     }
     
     func removeSignature() {
@@ -171,7 +175,7 @@ open class EPSignatureView: UIView {
         do {
             try FileManager.default.removeItem(atPath: filePath)
         }
-        catch let error {
+        catch {
             print(error)
         }
     }

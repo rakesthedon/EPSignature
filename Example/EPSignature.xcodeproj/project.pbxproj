@@ -13,7 +13,8 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		826EE5F5028BB52B3B18CD8E /* Pods_EPSignature_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76334BC24A09F53C3E741719 /* Pods_EPSignature_Tests.framework */; };
-		C777CECC23122F5F43D69A67 /* Pods_EPSignature_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9344E58733CDC0A7D5F89F5 /* Pods_EPSignature_Example.framework */; };
+		8A9B5503280D034B003DE5D4 /* Pods_EPSignature_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9B5502280D034B003DE5D4 /* Pods_EPSignature_Example.framework */; };
+		8A9B5504280D034B003DE5D4 /* Pods_EPSignature_Example.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9B5502280D034B003DE5D4 /* Pods_EPSignature_Example.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F4610E951C4E435800D093B5 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4610E931C4E435800D093B5 /* Tests.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,20 @@
 			remoteInfo = EPSignature;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8A9B5505280D034B003DE5D4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8A9B5504280D034B003DE5D4 /* Pods_EPSignature_Example.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0F8DB633D789A18A31700E0D /* Pods-EPSignature_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EPSignature_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EPSignature_Tests/Pods-EPSignature_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -41,6 +56,8 @@
 		607FACE51AFB9204008FA782 /* EPSignature_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EPSignature_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76334BC24A09F53C3E741719 /* Pods_EPSignature_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EPSignature_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B384D2F1FB9E801E17B03E /* EPSignature.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EPSignature.podspec; path = ../EPSignature.podspec; sourceTree = "<group>"; };
+		8A9B54FE280D02DB003DE5D4 /* EPSignature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EPSignature.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A9B5502280D034B003DE5D4 /* Pods_EPSignature_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_EPSignature_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9505CA2A7C08D1FAE19D88BE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		BADBD621301FD946BBB4C228 /* Pods-EPSignature_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EPSignature_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EPSignature_Tests/Pods-EPSignature_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C9344E58733CDC0A7D5F89F5 /* Pods_EPSignature_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EPSignature_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C777CECC23122F5F43D69A67 /* Pods_EPSignature_Example.framework in Frameworks */,
+				8A9B5503280D034B003DE5D4 /* Pods_EPSignature_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +101,8 @@
 		3D8E32AFD2A6091E2A06F30A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8A9B5502280D034B003DE5D4 /* Pods_EPSignature_Example.framework */,
+				8A9B54FE280D02DB003DE5D4 /* EPSignature.framework */,
 				C9344E58733CDC0A7D5F89F5 /* Pods_EPSignature_Example.framework */,
 				76334BC24A09F53C3E741719 /* Pods_EPSignature_Tests.framework */,
 			);
@@ -165,7 +184,7 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				C365D2E715598F110C1F6304 /* [CP] Embed Pods Frameworks */,
-				DA52CB9707F47475E364E0B0 /* [CP] Copy Pods Resources */,
+				8A9B5505280D034B003DE5D4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,7 +204,6 @@
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
 				9FA7043A9F055B521A931F07 /* [CP] Embed Pods Frameworks */,
-				DC044E23ED185987EBDD0537 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,6 +243,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -284,7 +303,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-EPSignature_Tests/Pods-EPSignature_Tests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-EPSignature_Tests/Pods-EPSignature_Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/EPSignature/EPSignature.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -293,7 +312,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EPSignature_Tests/Pods-EPSignature_Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EPSignature_Tests/Pods-EPSignature_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C365D2E715598F110C1F6304 /* [CP] Embed Pods Frameworks */ = {
@@ -302,7 +321,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-EPSignature_Example/Pods-EPSignature_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-EPSignature_Example/Pods-EPSignature_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/EPSignature/EPSignature.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -311,7 +330,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EPSignature_Example/Pods-EPSignature_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EPSignature_Example/Pods-EPSignature_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C7F9A3E07A1D37DEC87BCADB /* [CP] Check Pods Manifest.lock */ = {
@@ -330,36 +349,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DA52CB9707F47475E364E0B0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EPSignature_Example/Pods-EPSignature_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DC044E23ED185987EBDD0537 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EPSignature_Tests/Pods-EPSignature_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -457,11 +446,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -503,10 +493,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -518,12 +509,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DG779MAMM2;
 				INFOPLIST_FILE = EPSignature/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -535,12 +525,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DG779MAMM2;
 				INFOPLIST_FILE = EPSignature/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -557,10 +546,10 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EPSignature_Example.app/EPSignature_Example";
 			};
 			name = Debug;
@@ -573,10 +562,10 @@
 				DEVELOPMENT_TEAM = DG779MAMM2;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EPSignature_Example.app/EPSignature_Example";
 			};
 			name = Release;

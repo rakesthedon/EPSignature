@@ -1,22 +1,23 @@
 {
   "name": "EPSignature",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "summary": "Signature component for iOS in Swift",
   "description": "Features\n1. User can draw the signature either by finger or by apple pencil\n2. Ability to save the signature as default signature\n3. Ability to load the saved signature\n4. Works on both orientations(portrait and landscape)\n5. Works on both iPhone and iPad\n6. Also can be embedded in any container view\n7. Can extract the signature as Image\n8. Draws smoothly",
-  "homepage": "https://github.com/ipraba/EPSignature",
+  "homepage": "https://github.com/rakesthedon/EPSignature",
   "license": "MIT",
   "authors": {
-    "Prabaharan": "mailprabaharan.e@gmail.com"
+    "Prabaharan": "mailprabaharan.e@gmail.com",
+    "Rakesthedon": "donrakes.design@gmail.com"
   },
   "source": {
-    "git": "https://github.com/ipraba/EPSignature.git",
-    "tag": "1.0.4"
+    "git": "https://github.com/rakesthedon/EPSignature",
+    "tag": "1.0.7"
   },
   "platforms": {
-    "ios": "9.0"
+    "ios": "13.0"
   },
   "requires_arc": true,
-  "source_files": "Pod/Classes/**/*",
+  "source_files": "Pod/Classes/**/*.swift",
   "resources": [
     "Pod/Classes/EPSignatureViewController.xib"
   ]

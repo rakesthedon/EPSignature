@@ -20,6 +20,9 @@ class ViewController: UIViewController, EPSignatureDelegate {
         signatureVC.subtitleText = "I agree to the terms and conditions"
         signatureVC.title = "John Doe"
         let nav = UINavigationController(rootViewController: signatureVC)
+
+        nav.modalPresentationStyle = .fullScreen
+
         present(nav, animated: true, completion: nil)
     }
 
